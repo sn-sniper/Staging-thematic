@@ -1,0 +1,170 @@
+.songs-filter {
+    width: 350px;
+    max-width: 100%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border: 1px solid rgba(17, 17, 30, 0.08);
+}
+
+.songs-filter__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.songs-filter__section + .songs-filter__section {
+    border-top: 1px solid #ededf4;
+    padding-top: 1.2rem;
+    margin-top: 0.4rem;
+}
+
+.songs-filter__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #232234;
+}
+
+.songs-filter__subtitle {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #3a3a52;
+}
+
+.songs-filter__row,
+.songs-filter__section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    color: #414157;
+}
+
+.songs-filter__label {
+    font-weight: 500;
+}
+
+.songs-filter__count {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #7a4bd2;
+}
+
+.songs-filter__toggle {
+    position: relative;
+    width: 46px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.songs-filter__switch {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.songs-filter__switch-slider {
+    width: 100%;
+    height: 100%;
+    background: #cfd0da;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+    position: relative;
+}
+
+.songs-filter__switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(17, 17, 30, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.songs-filter__switch:checked + .songs-filter__switch-slider {
+    background: #9357e8;
+}
+
+.songs-filter__switch:checked + .songs-filter__switch-slider::before {
+    transform: translateX(20px);
+}
+
+.songs-filter__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.songs-filter__chip {
+    border: 1px solid #d8d8df;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #4a4a5b;
+    padding: 0.55rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.songs-filter__chip:hover,
+.songs-filter__chip--active {
+    background: #d5f279;
+    border-color: #d5f279;
+    color: #424242;
+}
+
+.songs-filter__options,
+.songs-filter__checkboxes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.songs-filter__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #42425b;
+}
+
+.songs-filter__checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    color: #42425b;
+}
+
+.songs-filter__checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: #9357e8;
+}
+
+.songs-filter__checkbox span {
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .songs-filter {
+        width: 100%;
+    }
+}
